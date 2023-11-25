@@ -1,16 +1,23 @@
 /*Krishiv Bahl 8973846*/
+html{
+    font:normal normal normal 20px/1.5 Arial, Helvetica, sans-serif;
+
+}
 body{
-    font:normal normal normal 12px/1.5 Arial, Helvetica, sans-serif;
+   
     width: 100vw;
     height:100vh;
     background-color: rgb(121, 100, 144);
+    display:flex;
+    flex-direction: column;
+    
 }
 h1{
 color: aqua(08, 10, 10);
 }
 h2{
 color : rgb(208, 10, 10);
-font-size: 2em;
+font-size: 2rem;
 }
 header{
    background-color:hsl(201, 77%, 42%);
@@ -22,26 +29,30 @@ list-style-type: none;
 
 nav ul li a{
 color: indigo;
-border: 2px solid indigo;
+border: 0.1em solid indigo;
 background-color: cornsilk;
 text-decoration: none;
-padding: 5px;
+padding: 0.25rem;
 }
 nav ul li a:hover{
     color: cornsilk;
     background-color: indigo;
     border-color: cornsilk;
 }
-
+section{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
 main{
-float: left;
-width: 65vw;
+flex: 2 1 70%;
 
 background-color:hsl(74, 92%, 46%);
 }
 aside{
-    float : right;
-    width: 25vw;
+   flex: 1 1 30%;
     background-color:hsl(155, 91%, 45%);
 }
 
@@ -56,13 +67,13 @@ aside a{
     color:rgba(22, 21, 21, 0.7);
 }
 footer{
-    clear:both;
+    
     background-color:hsl(341, 86%, 46%);
 }
 .structural{
-margin: 10px;
-padding: 10px;
-border: 2px solid black;
+margin: 1rem;
+padding: 1rem;
+border: 0.1rem solid black;
 }
 #para1{
 color:rgb(241, 10, 41)
@@ -106,4 +117,33 @@ color:#f02;
 }
 footer p{
   font-size: .75em;  
+}
+img{
+width: 80%;
+height: 80%;
+
+}
+figure{
+border: 0.1em solid black;
+}
+
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 0.5rem;
+}
+@media (max-width:600px){
+html{
+    font-size: 10px;
+}
+   #gallery{
+    grid-template-columns:1fr ;
+    grid-template-rows:1fr ;
+   } 
+   section{
+    display: block;
+
+   }
 }
